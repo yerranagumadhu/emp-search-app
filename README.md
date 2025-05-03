@@ -1,21 +1,32 @@
-# 🧭 Employee Search App (App 1)
+# Save the README content as a Markdown (.md) file
 
-This is the main React application used to **search employees by ID** and open their profile in a separate tab securely. It integrates with a Django backend protected by **Okta SAML SSO authentication**.
+readme_content = """
+# 📘 README: Employee Search App (App 1)
 
----
-
-## 🚀 Features
-
-- 🔍 Search employees by ID
-- Opens employee details in a new tab (App 2)
-- Prevents multiple employee profiles from being opened simultaneously
-- Integrates with Okta SSO-protected backend
+This is the primary **React application** that allows users to **search for employees by ID** and opens a secure, dedicated tab (App 2) to display employee details. It works in coordination with a **Django backend protected by Okta SAML SSO authentication**.
 
 ---
 
-## 🛠️ Setup Instructions
+## 🔍 Features
 
-### 1. Install Dependencies
+- 🔎 Search employees using their ID
+- 🗂 Opens employee details in a separate tab (App 2)
+- 🚫 Restricts access to a single employee detail tab at a time
+- 🔐 Auth flow via Okta SSO and Django backend
+- 🌐 Handles cross-app redirect via SAML RelayState
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 16.x
+- npm ≥ 8.x
+- Django backend running at `http://localhost:8000/`
+- App 2 (Employee Details) running at `http://localhost:3001/`
+
+### Install Dependencies
 
 ```bash
 npm install
