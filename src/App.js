@@ -7,7 +7,7 @@ function App() {
 
   const handleSearch = () => {
     if (empId.trim()) {
-      const empDetailsUrl = `http://localhost:3000/?empId=${empId}`;
+      const empDetailsUrl = `http://localhost:3001/?empId=${empId}`;
       sessionStorage.setItem("empAccess", "true");
       window.open(empDetailsUrl, "_blank");
     }
