@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - BACKEND_URL=http://localhost:3001
+    ports:
+      - "3000:80"
+
+# Build the Docker image and start the container
+# docker compose up --build 
+

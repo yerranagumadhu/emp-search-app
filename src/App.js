@@ -6,8 +6,10 @@ function App() {
   const [empId, setEmpId] = useState("");
 
   const handleSearch = () => {
-    if (empId.trim()) {
-      const empDetailsUrl = `http://localhost:3001/?empId=${empId}`;
+    if (empId.trim()) {      
+      const APP1_URL = window._env_?.BACKEND_URL;
+      console.log("Backend URL:", APP1_URL);
+      const empDetailsUrl = `${APP1_URL}/?empId=${empId}`;
       sessionStorage.setItem("empAccess", "true");
       window.open(empDetailsUrl, "_blank");
     }
